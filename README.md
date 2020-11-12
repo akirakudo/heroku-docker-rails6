@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is sample application of 'Docker on Rails6'
 
-Things you may want to cover:
+## How it works
 
-* Ruby version
+1. `$ docker compose build`
+1. `$ docker compose run web bin/yarn install --check-files`
+1. `$ docker compose run web bin/rails db:create`
+1. `$ docker up`
 
-* System dependencies
+## Deploy
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. `$ heroku create`
+1. `$ heroku addons:create heroku-postgresql:hobby-dev`
+1. `$ heroku container:push web`
+1. `$ heroku container:release web`
